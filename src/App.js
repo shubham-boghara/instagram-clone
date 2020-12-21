@@ -58,23 +58,22 @@ function App() {
             unsubscribe();
         }
     },[user,username]);
+          
 
 
     useEffect(() => {
-         db.collection("posts")
+          db.collection("posts")
              .orderBy('timestamp','desc')
-             .onSnapshot(snapshot => {
-                setPost(
-                    snapshot.docs.map(doc => ({
-                        id: doc.id,
-                        post:doc.data()
-                    })));
-             })
-        console.log(posts);
+             .onSnapshot((snapshot) => {
+              const obj = snapshot.doc.map((doc) => ({
+                       id: doc.id,
+                       post:doc.data()
+              }))
+              setPost(obj);
+          })
+    },[])
 
-
-
-    },[posts]);
+    
 
     const signUp = (event) => {
         event.preventDefault();
