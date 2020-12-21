@@ -52,6 +52,7 @@ const Post = ({username,caption,imageurl,userid,postId,user}) => {
     <h3>{username}</h3>
                 {userid==="bllt3pI4BfhG6eik4mxVv0YTD0V2"&&
                 <img src={verification}
+                     alt="verification"
                      height="22px" width="22px"/>
                 }
 
