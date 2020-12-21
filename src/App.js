@@ -74,7 +74,7 @@ function App() {
 
 
 
-    },[]);
+    });
 
     const signUp = (event) => {
         event.preventDefault();
