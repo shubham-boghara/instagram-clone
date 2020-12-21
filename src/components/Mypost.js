@@ -21,8 +21,8 @@ const MyProfile = ({userid,username}) => {
                     post:doc.data()
                 })));
             })
-        console.log(profile);
-    },[userid,profile]);
+        
+    },[userid]);
 
 
     return(
