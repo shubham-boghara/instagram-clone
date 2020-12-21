@@ -22,7 +22,7 @@ const MyProfile = ({userid,username}) => {
                 })));
             })
         console.log(profile);
-    },[userid]);
+    },[userid,profile]);
 
 
     return(
